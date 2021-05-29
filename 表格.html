@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <table align="center" border="1" cellpadding="10" cellspacing="0">
+    <tr><td>一个表格</td> <td>两个表格</td></tr>
+    <tr><td>1</td> <td>2</td></tr>
+    <tr><td>3</td> <td>4</td></tr>
+
+  </table>
+  <h4>合并单元格</h4>
+  <!-- 分为跨行和跨列合并 跨行是rowspan 跨列是colspan-->
+  <table width="200" height="60" border="1" cellspacing="0">
+  <tr>
+    <td></td>
+    <td colspan="2"></td>
+  </tr>
+  <tr>
+    <td rowspan="2"></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  </table>
+  <h4>无序列表</h4>
+  <ul>
+    <li>这是无序列表</li>
+    <li>相互之间是并列关系，没有顺序</li>
+    <li>ul标签里面只能包含li标签</li>
+  </ul>
+  <h4>有序列表和无序列表的格式差不多，标签为&lt;ol&gt;</h4>
+  <h4>自定义列表</h4>
+  <dl>
+    <dt>联系方式</dt>
+    <dd>电话</dd>
+    <dd>QQ</dd>
+    <dd>微信</dd>
+  </dl>
+  <h4>表单标签</h4>
+  <form action="">
+    <!-- text是文本框 -->
+    <!-- value是传送给后台的值 -->
+    用户名：<input type="text" value="请输入用户名"><br>
+    <!-- password是密码框 -->
+    密码：<input type="password"><br>
+    <!-- radio是单选按钮，用于实现多选1 -->
+    <!-- name是表单元素的名称，只有同一name属性下的单选按钮才能实现多选1的效果 -->
+    <!-- label 绑定标签，可以把文字和对应的表单绑定，for和id里面的属性相同 --> 
+    性别：<label for="sex-man">男</label> <input type="radio" name="sex" checked="checked" id="sex-man"> 
+    <label for="sex-woman">女</label> <input type="radio" name="sex" id="sex-woman"><br>
+    <!-- checkbox是复选框 -->
+    爱好：吃饭<input type="checkbox"> 睡觉<input type="checkbox"><br>
+    <!-- submit 提交按钮 把表单域里面的值传给后台 -->
+    <input type="submit" value="提交">
+    <!-- reset 重置按钮 把表单域信息恢复初始值 -->
+    <input type="reset" value="重新填写">
+    <!-- button 普通按钮 后期结合JavaScript使用 -->
+    <input type="button" value="发送短信"><br>
+    <!-- select标签 下拉名单选择 -->
+    <select name="" id=""><br>
+      <option value="">选项1</option>
+      <option value="">选项2</option>
+      <option value="">选项3</option>
+    </select><br>
+    <!-- textarea标签 文本框标签 -->
+    文本域
+    <textarea name="" id="" cols="50" rows="20">
+      这是个文本框
+    </textarea><br>
+    <strong>每个表单元素都应该有自己独特的name</strong>  <br>
+    三个相似的标签 <br>
+    表单域 form 文件域 file 文本域 textarea <br>
+    <h4>综合练习</h4>
+    <a href="综合案例1/注册页面.html" target="_blank">点击这里打开注册页面</a> 
+   </form>
+</body>
+</html>

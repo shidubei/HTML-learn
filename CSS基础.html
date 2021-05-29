@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        /*选择器{样式}*/
+        /*给谁改样式{改什么样式}*/
+        /*标签选择器：直接以html的标签为选择器*/
+        p {
+            color: red;
+            /*字体大小 */
+            font-size: 12px;
+        }
+
+        /*类选择器口诀：样式点定义 结构类(class)声明*/
+        .red {
+            color: red;
+        }
+
+        /* id选择器：样式# 定义，只能调用一次，即当一个标签调用之后，另一个标签不能再次调用 */
+        #fonts {
+            /*字体的复合属性 顺序不能乱*/
+            /*font: font-style font-weight font-size font-family;*/
+            /*必须保留font-size和font-family属性*/
+            font: italic 700 16px 'Microsoft YaHei';
+        }
+
+        /*div {
+            /*文本属性
+        /*文本颜色
+        color: red;
+        /*文本对齐*/
+        text-align: center;
+        /*装饰文本 下划线等*/
+        text-decoration: underline;
+        /*文本缩进 只缩进首行*/
+        text-indent: 2em;
+        /*em是相对单位，以当前元素大小为准*/
+        /*行间距
+        line-height: 1.5em;
+        }*/
+
+
+        /*后代选择器：中间用空格隔开*/
+        .nav li a {
+            color: orange;
+        }
+
+        /*子选择器：只选择离父元素最近的子元素，和后代选择器做区分*/
+        div>p {
+            color: red;
+        }
+
+        /*并集选择器：多个标签一起，相互之间用逗号隔开
+        p,
+        h1 {}*/
+
+        /*伪类选择器:可以添加一些特殊效果*/
+        /*例如链接伪类选择器*/
+        /*未被访问*/
+        a:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        /*被访问后*/
+        a:visited {
+            color: blue;
+            text-decoration: none;
+        }
+
+        /*悬停时*/
+        a:hover {
+            color: skyblue;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        /*点击时*/
+        a:active {
+            color: red;
+            text-decoration: underline;
+        }
+
+        /*focus:选择获得光标的表单*/
+        input:focus {
+            background-color: gainsboro;
+        }
+
+        /*元素显示方式的转换*/
+        span {
+            display: block;
+        }
+
+        /*背景图片*/
+        .bimg {
+            background-image: url(images/steam.png);
+            width: 250px;
+            height: 400px;
+            /* 背景图片平铺 */
+            /* background-repeat: repeat; */
+            /* 背景图片不平铺 */
+            background-repeat: no-repeat;
+            background-position: left top;
+        }
+    </style>
+</head>
+
+<body>
+    <p>有点意思</p>
+    <h5 id="fonts">黑</h5>
+    <h5 id="fonts">黑</h5>
+    <a href="综合案例1/新闻页面.html" target="_blanks">新闻页面</a>
+    <ul>
+        <li><a href="">这是橙色的</a></li>
+    </ul>
+    <div class="bimg">
+        <p>子选择器只选最近的子元素</p>
+        <span>
+            这个就没有被选择
+        </span>
+        <span>
+            它不是独占一行
+        </span>
+    </div>
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <a href="综合案例1/小米侧边栏.html">小米侧边栏</a>
+</body>
+
+</html>

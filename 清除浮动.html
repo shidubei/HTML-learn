@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 1px solid blue;
+        }
+
+        .a {
+            width: 100px;
+            height: 50px;
+            background-color: black;
+            float: left;
+        }
+
+        .b {
+            width: 150px;
+            height: 60px;
+            background-color: aqua;
+            float: left;
+        }
+
+        .clear {
+            clear: both;
+            /* 清除浮动 */
+        }
+
+        .box2 {
+            border: 1px solid blue;
+            overflow: hidden;
+        }
+
+        .a2 {
+            width: 100px;
+            height: 50px;
+            background-color: black;
+            float: left;
+        }
+
+        .b2 {
+            width: 150px;
+            height: 60px;
+            background-color: aqua;
+            float: left;
+        }
+
+        .clearfix::before,
+        .clearfix::after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix::after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .box3 {
+            border: 1px solid blue;
+        }
+
+        .a3 {
+            width: 100px;
+            height: 50px;
+            background-color: black;
+            float: left;
+        }
+
+        .b3 {
+            width: 150px;
+            height: 60px;
+            background-color: aqua;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 清除浮动的方法有四种 -->
+    <!-- 1.额外标签法 :需要添加一个或多个clear属性的块级标签-->
+    <div class="box">
+        <div class="a">1</div>
+        <div class="b">2</div>
+        <div class="clear"></div>
+    </div>
+    <br>
+    <!-- 2.给父级添加overflow -->
+    <div class="box2">
+        <div class="a2">1</div>
+        <div class="b2">2</div>
+    </div>
+    <br>
+    <!-- 3.双伪标签 -->
+    <div class="box3 clearfix">
+        <div class="a3">1</div>
+        <div class="b3">2</div>
+    </div>
+</body>
+
+</html>

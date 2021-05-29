@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+    <style>
+        div {
+
+            width: 200px;
+            height: 200px;
+            /* 盒子的边框属性 
+            border-style: solid;
+            border-width: 12px;
+            border-color: pink;
+            边框的四条边可以分开定义
+            border-top: solid 12px black;
+            border-left: dashed 12px pink;
+            border-right: dotted 12px blue;
+            border-bottom: double 12px salmon;
+            边框的合并
+            border-collapse: collapse;*/
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: pink;
+            /*padding会影响实际的盒子大小 */
+            margin: 0 auto;
+            /* 左右外边距设置为auto可以使盒子水平居中显示 */
+            text-align: center;
+            /* 行内元素和行内块元素居中对齐可以在父级块元素添加text-align：center样式 */
+        }
+
+        /* 相邻块元素垂直外边距合并问题：垂直的外边距只按照最大数值来显示. */
+        /* 嵌套块元素垂直外边距塌陷问题：对两个嵌套关系的块元素，父元素有上外边距同时子块元素也有上外边距，
+        此时父元素会塌陷较大的外边距值 
+        解决方法：
+        1.为父元素加上边框
+        2.为父元素定义内边距
+        3.为父元素添加overflow：hidden*/
+        /* 不同的浏览器具有默认的内外边距：
+        用全局选择器清除内外边距 */
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>内边距</span>
+        <!-- <img src="images/padding.png" alt=""> -->
+    </div>
+
+</body>
+
+</html>

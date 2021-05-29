@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 浮动的特性:
+        1.脱离了标准流的控制移动到指定的位置
+        2.浮动的盒子不再保留原先的位置 (其余没有添加浮动的盒子会去占有浮动的位置)
+        3.如果多个盒子都设置了浮动,则它们会按照属性值一行内显示并且顶端对齐排列
+        4.浮动元素经常和标准父级搭配使用
+        一般来说：先用标准的父级元素分上下，浮动元素在父级元素之间分左右*/
+        .left {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(30, 30, 30);
+        }
+
+        .right {
+            /* float: right; */
+            width: 300px;
+            height: 300px;
+            background-color: rgb(250, 30, 30);
+        }
+
+
+        span {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left"></div>
+    <div class="right"></div>
+    <span>
+    </span>
+    <a href="常见的网页布局.html" target="_blank">常见的网页布局</a>
+</body>
+
+</html>

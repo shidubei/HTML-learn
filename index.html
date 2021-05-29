@@ -1,0 +1,159 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>web前端开发</title>
+    <style type="text/css">
+    h4{
+      height: 100px;/*设置行高*/
+      font-size: 50px;/*字体大小*/
+      line-height: 100px;/*段落高度，和行高一样时达到居中对齐的效果*/
+      text-align: right;/*文本对齐的方式，可以左对齐，右对齐，居中对齐等*/
+      text-decoration: overline;/*辅助线的添加样式，包括在上面，在下面，在中间等*/
+      background-color: aqua;/*设置背景颜色*/
+      background-image: url("images/steam.png");/*设置背景图片*/
+      background-repeat: no-repeat;/*设置背景的填充方式，如-x是在x方向填充*/
+    }
+    a{
+      font-size: 20px;
+      text-decoration: none;
+      display: block;
+    }/*这是对超链接样式的设置，以下的伪类选择器都是对超链接的样式进行设定*/
+    a:link{
+      text-decoration: none;
+      color:cadetblue;
+    }/*设置正常显示时超链接的样式*/
+    a:visited{
+      text-decoration: none;
+      color: darkblue;
+    }/*设置点击时超链接的样式*/
+    a:hover{
+      text-decoration: underline;
+      color:darkblue;
+      font-size: 200%;
+    }/*设置悬停时超链接的样式*/
+    a:after{
+      text-decoration: none;
+      color: red;
+    }/*设置访问后超链接的样式*/
+    /*通过这些设定，可以达到一个简单的动画效果*/
+    .image{
+      list-style-image: url("images/csdn.png");
+    }/*可以用来对列表的标号进行设置*/
+    table,td{
+      border-collapse: collapse;/*将表格的边界和内容的边界融合*/
+      width: 300px;/*表格宽度*/
+      height: 500px;/*表格高度*/
+      border: 1px solid;/*表格边界*/
+    }/*设置表格*/
+    tr:nth-child(odd){
+      background-color:darkorange
+    }/*奇偶选择器，对表格的不同行列进行编辑*/
+    #box{
+      width: 100px;/*盒子的宽度*/
+      height: 10px;/*盒子的高度*/
+      border: 1px solid;/*盒子边界的设定*/
+      padding: 20px;/*盒子的内边距*/
+      margin: 0 auto;/*盒子的外边距,垂直方向会合并，水平方向不会合并*/
+      overflow: auto;/*如果超出了盒子范围，显示滑动条*/
+    }/*设定盒子模型的基本格式*/
+    div{
+      border-top-style: solid;/*边界的上方设定一条实线*/
+      border-top-color: darkorange;/*实线的颜色*/
+    }/*对区域的边界进行设定*/
+    .line{
+      height: 1px;
+      width:500px;
+      border-top: 1px solid #e5e5e5;
+    }/*可以对水平分割线进行设置*/
+    #imgbox{
+      text-align: center;
+      font-size: 0;
+    }
+    img{
+      height: 100px;
+      width: 100px;
+      margin-left: 5px;
+      border:1px solid #0cf;
+      padding: 5px;
+    }/*可以对图片的大小进行设置*/
+    /*文档流定位：系统默认的排列方式
+    有的元素会单独的占一行，有些会组合占一行*/
+    /*block元素：单独占一行，元素的长宽，边距可以调节*/
+    /*inline元素：不单独占一行，长宽不可设置，width
+    就是包含的文字或图片的width*/
+    /*inline-block元素：不单独占一行，元素的长宽，边距可以调节*/
+    /*层定位：
+    z-index属性：值大的在上面（相对于原来的参照物）
+    position属性:
+    static： 默认值，没有定位，元素出现在正常的流当中。
+    fixed（固定定位）：相对于浏览器窗口进行定位【如网页广告】
+    relative（相对定位）：相对于直接父元素进行定位
+    absolute（绝对定位）:相对于static定位以外的第一个父元素进行定位
+    */
+  /*css3属性：
+    border-radius属性：盒子的圆角边框
+    box-shadow属性:作文本的阴影
+    border-top-left-radius:水平方向和垂直方向，也可以只定义一个
+    box-shadow：inset 内部阴影
+                outset：默认 水平偏移 垂直偏移 模糊距离（值越大范围越大）\
+    text-shadow:字体阴影 
+    word-wrap属性：允许长单词，URL强制进行换行*/
+    div{
+      height: 100px;
+      width: 150px;
+      border:1px solid blue;
+      border-top-left-radius: 40px 20px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 10px 10px 30px #888;
+    }
+    h1{
+      color: white;
+      text-shadow: 2px 2px 3px #000;
+    }
+    @font-face{
+      font-family:AlexBrush;
+      src:url('../fonts/AlexBrush-Regular.ttf'),
+          url('../fonts/AlexBrush-Regular\ -\ 副本.eot'),
+          url('../fonts/AlexBrush-Regular\ -\ 副本.svg'),
+          url('../fonts/AlexBrush-Regular\ -\ 副本.woff');
+    }
+    h2{
+      font-family: AlexBrush;
+    }
+    </style>
+  </head>
+  <body>
+      <h1>web design</h1>
+      <h2>webdesign</h2>
+      <h4>课程内容包括HTML,CSS,JS</h4> 
+      <a href="#">一个测试用的超链接</a>
+     <ul id="imgbox">
+       <li><img src="images/csdn.png" alt=""></li>
+       <li><img src="images/steam.png" alt=""></li>
+       <li><img src="images/测试.jpg" alt=""></li>
+     </ul>
+      <table>
+        <tr>
+          <td>red</td>
+          <td>yellow</td>
+          <td>blue</td>
+        </tr>
+        <tr>
+          <td>heheh</td>
+        </tr>
+        <tr>
+          <td>hh</td>
+        </tr>
+      </table>
+      <hr class="line">
+      <div id="box">
+        <p >这是内容,你猜猜看有什么，哈哈哈，大笨蛋</p> 
+      </div>
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <div></div>
+
+  </body>
+</html>
+      
